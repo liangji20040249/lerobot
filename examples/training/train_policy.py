@@ -48,6 +48,7 @@ def main():
     output_features = {key: ft for key, ft in features.items() if ft.type is FeatureType.ACTION}
     input_features = {key: ft for key, ft in features.items() if key not in output_features}
 
+    
     # Policies are initialized with a configuration class, in this case `DiffusionConfig`. For this example,
     # we'll just use the defaults and so no arguments other than input/output features need to be passed.
     cfg = DiffusionConfig(input_features=input_features, output_features=output_features)
